@@ -380,7 +380,7 @@
 		var textContent;
 		switch(name){
 				case "mailBox":
-					textContent = "Click for contact info!";
+					textContent = "You can contact me at carmichael.alexander@gmail.com!\nAlso see my external links.";
 					if(this.newHover)
 						this.mailboxSFX.play();
 				break;
@@ -419,8 +419,8 @@
 								this.fadeInElements(this.bioBox);
 							}
 							else{
-								//this.fadeOutElements(this.bioBox, this.LOADING_SCREEN_TRANSITION_DURATION);
-								this.bioBox.style.opacity = 0;
+								this.fadeOutElements(this.bioBox, 1000);
+								
 							}
 							break;
 						
