@@ -1,0 +1,203 @@
+
+html, body {
+	height: 100%;
+}
+/*stuff that governs the top navigation banner that is persistent throughout*/
+#topBanner{
+	position: absolute;
+	background-color: #ddeeee;
+	left: 0;
+	top: 0;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#bannerContent{
+	opacity: 1.0;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.bannerButton{
+	display: block;
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+	 display: inline-block;
+}
+
+.bannerButton:hover{
+	background-color: #00cc00;
+	position: relative;
+	top: -5px;
+}
+/*End of navigation banner stuff*/
+
+#mainBody{
+	
+	/*makes sure that copyright element is at bottom*/
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin-top: 160px;
+	margin-bottom: -50px;
+}
+
+#mainBody p{
+	position: relative;
+	
+	max-width: 1200px;
+}
+
+.copyright, .push{
+	height: 50px;
+   float: right;
+}
+
+/*stuff to do with text and image layout*/
+
+/*image container that puts images in the middle*/
+.heroContainer{
+		overflow: auto;
+}
+
+.heroShotImages{
+	position: relative;
+	max-width: 600px;
+	float: center;
+	display: inline-block;
+	padding: 10px;
+}
+
+.heroShotImages img{
+	max-width: 100%;
+}
+.imageContainer{
+    background: yellow;
+	 overflow: auto;
+}
+
+.imageContainer: hover{
+	max-width: 600px;transform: scale(1.5);
+	opacity: 0.5;
+}
+
+.imageBlock{
+	position: relative;
+	max-width: 400px;
+	float: left;
+	display: inline-block;
+	padding: 10px;
+	transition: all .2s ease-in-out;
+}
+
+.imageBlock img{
+		max-width: 100%;
+}
+
+
+.imageBlockText{
+	float: left;
+	max-width: 500px;
+}
+
+.imageBlockMiddle{
+	position: relative;
+	max-width: 400px;
+	float: middle;
+	padding: 10px;
+}
+
+.imageBlockMiddle img{
+		max-width: 100%;
+}
+
+.textWrapRight{
+	margin: 0px 0px 15px 15px;
+	float: right;
+	margin: 10px;
+}
+
+.textWrapLeft{
+	float: left;
+	margin: 10px;
+}
+/*End of image layout stuff*/
+
+/*for when I want to write a code example*/
+.codeBlock{
+	position: relative;
+	text-align: center;
+	font-family: "Courier New", Courier, monospace;
+}
+
+#hover-over-box{
+	position: absolute;
+	background-color: purple;
+	opacity: 0.8;
+	width: auto;
+	height: 20px;
+}
+
+#bioBox{
+	position: absolute;
+	display: none;
+	background-color: #ddeeee;
+	width: 500px;
+	height: auto;
+	left: 300px;
+	top: 300px;
+	-webkit-transition: opacity 2.0s;
+   -moz-transition: opacity 2.0s;
+   -o-transition: opacity 2.0s;
+   transition: opacity 2.0s;
+}
+
+/*canvas*/
+#arena {
+   margin: 0 auto;
+   width: 1602px;
+   height: 820px;
+}
+
+#home-canvas {
+	position: absolute;
+	left: 50%;
+	margin-left: -423px;
+   display: none;
+}
+/*Load Screen Stuff*/
+#loading {
+   position: absolute;
+   margin-top: -100px;
+
+   font: 55px Palatino;
+   text-align: center;
+
+   -webkit-transition: opacity 2.0s;
+   -moz-transition: opacity 2.0s;
+   -o-transition: opacity 2.0s;
+   transition: opacity 2.0s;
+}
+
+#loading-title {
+   padding-left: 40px;
+   padding-bottom: 30px;
+   color: #ff6;
+   text-shadow: 2px 2px 4px rgb(0,0,0);
+   display: none;
+}
+
+#loading-animated-gif {
+	margin-top: 10px;
+   margin-left: 400px;
+   border: thin solid rgba(0, 0, 255, 0.7);
+   border-radius: 60px 60px 60px;   
+   padding: 40px;
+   display: none;
+}

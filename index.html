@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+	<head>
+		<!--CSS -->
+		<link rel="stylesheet" href="css/page.css">
+		
+		<title>Alex Carmichael's Projects Portfolio</title>
+	</head>
+	<body>
+		<!--BANNER STUFF -->
+		<div id = "topBanner">
+			<h2 align="center">Home</h2>
+			<div id = "bannerContent"  align="center">
+				<a href='index.html' class="bannerButton">home</a>
+				<a href='buildLogs.html' class="bannerButton">build logs</a>
+				<a href='externalLinks.html' class="bannerButton">external links</a>
+			</div>
+		</div>
+		
+		<!--Load Screen-->
+		<div id='loading'>
+            <div id='loading-title'>Loading...</div>
+            <img id='loading-animated-gif' width='25%'/> <!-- no src attribute -->
+      </div>
+			
+		<canvas id='home-canvas' width='846' height='606' onmousemove="draw(event)" onmousedown='mouseclick()'>
+            Your browser does not support HTML5 Canvas.
+      </canvas>
+		<!--MAIN BODY-->
+			<div id='mainBody'>
+				
+				<div class='push'></div>
+				
+			</div>
+			
+			<div id='hover-over-box'>
+				Place holder Text!
+			</div>
+			
+			<div id='bioBox'>
+				Hi! I started making this page in November 2016 because I have a lot of experience in C++ and other object oriented programming
+				languages, but not so much web design experience under my belt. Most of my programmer friends are web dev ninjas,
+				and I wanted to show that I can hang. It's an ego thing. While my intention for this site is to showcase some of my technical skills, I will gladly throw
+				myself into any hobby that results in some kind of finished product. As such I have some of my art projects (I have a BFA in visual art
+				in addition to my more recent computer science degree) and other works up here.</p>
+				<p><strong>If you are chiefly interested in my programming experience,
+				I invite you to check out my github repository.</strong> You can find the link under "external links" in the top navigation banner.</p>
+				<h2>Bio:</h2>
+				<p>
+				<ul>
+					<li>From Victoria, BC</li>
+					<li><strong>BFA in Visual Arts</strong> graduated May, 2007 from the University of Victoria</li>
+					<li><strong>BSc in Computer Science</strong> graduated October 2016</li>
+					<li>I am father to an amazing little boy, and husband to an amazing woman</li>
+				</ul>
+				<p  align ='center'><strong>Click on the sign again to dismiss this text.</strong></p>
+			</div>
+			<div>
+				<h1>This site is currently a work in progress, and right now mostly serves as a technical demo</h1>
+				</div>
+			<!--Sound Effects -->
+			<audio id='doorSound' preload='auto'>
+				<source src='audio/doorCreak.mp3' type='audio/mp3'>
+			</audio>
+			<audio id='mailboxSound' preload='auto'>
+				<source src='audio/blop.mp3' type='audio/mp3'>
+			</audio>
+		 <!-- Copyright...........................................-->
+		 <br style="clear:both" />
+         <div class='copyright'>  2016 Alexander Carmichael</div>
+			<!--JavaScript -->
+		 <!--script src='js/input.js'></script-->
+		 <script src='js/requestNextAnimationFrame.js'></script>
+		 <script src='js/sprites.js'></script>
+		 <script src='js/timeSystem.js'></script>
+		 <script src='js/animationTimer.js'></script>
+		 <script src='js/canvas.js'></script>
+	</body>
+</html>
