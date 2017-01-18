@@ -45,6 +45,10 @@
 		{left: 468, top: 25, width: 134, height: 200}
 	],
 	
+	this.zeppCell = [
+		{left: 469, top: 410, width: 351, height: 136}
+	],
+	
 	
 	this.lastAnimationFrameTime = 0,		
 	this.lastFpsUpdateTime = 0,
@@ -179,6 +183,7 @@
 		this.createDoorSprite();
 		this.createMailBoxSprite();
 		this.createSignSprite();
+		this.createZeppSprite();
 		// this.initializeSprites();
    },
 	
@@ -233,7 +238,7 @@
 		this.door = new Sprite('door',
 										new SpriteSheetArtist(this.spritesheet, 
 										this.doorCells),
-										[]); //todo, new behaviour
+										[]); 
 		this.door.runAnimationRate = 30;
 		this.door.left = 275;
 		this.door.top = 210;
@@ -273,6 +278,20 @@
 		this.signSprite.hovered = false;
 		this.signSprite.clicked = false;
 		this.sprites.push(this.signSprite);
+	},
+	
+	createZeppSprite: function(){
+		this.zepp = new Sprite('zepp',
+										new SpriteSheetArtist(this.spritesheet, 
+										this.zeppCell),
+										[this.playBehavior]);
+		this.zepp.runAnimationRate = 0;
+		this.zepp.left = 450;
+		this.zepp.top = 10;
+		this.zepp.width = 351;
+		this.zepp.height = 136;
+		this.zepp.hovered = false;
+		this.sprites.push(this.zepp);
 	},
 	
 	draw: function(now){
@@ -392,6 +411,9 @@
 				case "sign":
 					textContent = "Click for info about me!";
 				break;
+				case "zepp":
+					textContent = "Click for project updates on my WordPress blog!"
+				break;
 		}
 		txt = document.createTextNode(textContent);
 		//space = document.getElementById("hover-over-box");
@@ -408,7 +430,7 @@
 					//specifically url redirection.
 					switch(sprite.type){
 						case 'hut':
-							window.location.href = 'buildLogs.html';
+								window.location.href = 'buildLogs.html';
 							break;
 						case 'mailBox':
 							this.mailBox.opened = ! this.mailBox.opened;
@@ -422,6 +444,9 @@
 								this.fadeOutElements(this.bioBox, 1000);
 								
 							}
+							break;
+							case 'zepp':
+								window.location.href = 'https://wordpress.com/post/alexcarmichaelblog.wordpress.com';
 							break;
 						
 						default:
