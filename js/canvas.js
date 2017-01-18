@@ -446,6 +446,7 @@
 							}
 							break;
 							case 'zepp':
+								//comment added here
 								window.location.href = 'https://wordpress.com/post/alexcarmichaelblog.wordpress.com';
 							break;
 						
