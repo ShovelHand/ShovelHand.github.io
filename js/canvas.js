@@ -48,7 +48,7 @@
 	this.zeppCell = [
 		{left: 469, top: 410, width: 351, height: 136}
 	],
-	
+
 	
 	this.lastAnimationFrameTime = 0,		
 	this.lastFpsUpdateTime = 0,
@@ -183,7 +183,9 @@
 		this.createDoorSprite();
 		this.createMailBoxSprite();
 		this.createSignSprite();
+
 		this.createZeppSprite();
+
 		// this.initializeSprites();
    },
 	
@@ -238,7 +240,9 @@
 		this.door = new Sprite('door',
 										new SpriteSheetArtist(this.spritesheet, 
 										this.doorCells),
+
 										[]); 
+
 		this.door.runAnimationRate = 30;
 		this.door.left = 275;
 		this.door.top = 210;
@@ -279,7 +283,7 @@
 		this.signSprite.clicked = false;
 		this.sprites.push(this.signSprite);
 	},
-	
+
 	createZeppSprite: function(){
 		this.zepp = new Sprite('zepp',
 										new SpriteSheetArtist(this.spritesheet, 
@@ -293,7 +297,7 @@
 		this.zepp.hovered = false;
 		this.sprites.push(this.zepp);
 	},
-	
+
 	draw: function(now){
 		this.drawBackground();
 		this.updateSprites(now);
@@ -430,8 +434,8 @@
 					//specifically url redirection.
 					switch(sprite.type){
 						case 'hut':
-								window.location.href = 'buildLogs.html';
-							break;
+							window.location.href = 'buildLogs.html';
+						break;
 						case 'mailBox':
 							this.mailBox.opened = ! this.mailBox.opened;
 							break;
@@ -449,7 +453,6 @@
 								//comment added here
 								window.location.href = 'https://wordpress.com/post/alexcarmichaelblog.wordpress.com';
 							break;
-						
 						default:
 						break;
 					}
