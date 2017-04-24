@@ -1,0 +1,43 @@
+/*canvas*/
+#arena {
+   margin: 0 auto;
+   width: 1602px;
+   height: 820px;
+}
+
+#home-canvas {
+	position: absolute;
+	left: 50%;
+	margin-left: -423px;
+   display: none;
+}
+/*Load Screen Stuff*/
+#loading {
+   position: absolute;
+   margin-top: -100px;
+
+   font: 55px Palatino;
+   text-align: center;
+
+   -webkit-transition: opacity 2.0s;
+   -moz-transition: opacity 2.0s;
+   -o-transition: opacity 2.0s;
+   transition: opacity 2.0s;
+}
+
+#loading-title {
+   padding-left: 40px;
+   padding-bottom: 30px;
+   color: #ff6;
+   text-shadow: 2px 2px 4px rgb(0,0,0);
+   display: none;
+}
+
+#loading-animated-gif {
+	margin-top: 10px;
+   margin-left: 400px;
+   border: thin solid rgba(0, 0, 255, 0.7);
+   border-radius: 60px 60px 60px;   
+   padding: 40px;
+   display: none;
+}
