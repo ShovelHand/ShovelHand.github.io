@@ -1,0 +1,56 @@
+
+.heroShotImages{
+			position: relative;
+			max-width: 100%;
+			float: center;
+			display: inline-block;
+			padding: 20px;		
+}
+
+.heroShotImages img{
+			max-width: 100%;
+}
+
+.imageContainer{
+	
+    background: yellow;
+	 overflow: auto;
+
+	 //padding: 20px;
+	 .imageContainer: hover{
+		max-width: 600px;transform: scale(1.5);
+		opacity: 0.5;
+	}
+	 
+}
+
+
+	
+.imageBlock{
+	
+	position: relative;
+	max-width: 400px;
+	float: left;
+	display: inline-block;
+	padding: 10px;
+	transition: all .2s ease-in-out;
+}
+.imageBlock img{
+		max-width: 100%;
+	}
+	
+	.imageBlockText{
+	float: left;
+	max-width: 500px;
+	}
+
+	.imageBlockMiddle{
+		position: relative;
+		max-width: 400px;
+		float: middle;
+		padding: 10px;
+	}
+
+	.imageBlockMiddle img{
+			max-width: 100%;
+	}
