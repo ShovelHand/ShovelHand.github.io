@@ -1,0 +1,126 @@
+
+<html>
+	<head>
+		<title>html cheat sheet</title>
+		<style type="text/css">
+		.tab { margin-left: 40px; }
+		#bod {font-size: 20;}
+		.block {background-color: cyan;
+					font-family: Comic sans MS;}
+		li{margin-top: 10px;}
+		</style>
+	</head>
+	
+	<body id="bod">
+		<h1>Some useful starting points to writing html</h1>
+		<p>HTML stands for Hyper Text Markup Language. The "markup language" part is an important distinction;
+		HTML is not a programming language, it provides instructions for how text and other elements like pictures,
+		links, and anything else on the page will be displayed. For some good insight into how HTML works, you could download
+		this or any other webpage and open it as a text document to see the markup.
+		<h3>Tags</h3>
+		Tags are how we tell the browser that opens the HTML document what something is, and how it's displayed. For an
+		example, consider the heading "Tags" up above, and the heading "Some useful starting points to writing html".
+		Do get them to display bigger than this paragraph text, I had to use heading tags, like:<br>
+		<div align=middle>&lth3&gt heading text goes between tags&lt/h3&gt</div> (by the way, special trickery is required to get the angle brackets to appear
+		on screen instead of being used as a directive to display a heading).
+		<p><p>Notice the forward slash "/" in the second &lt/h3&gt tag? Most tags come as a pair, with one being the opening
+		(&lttag&gt) and one being the closing (&lt/tag&gt), and the slash means it's a closing tag. It's important because
+		tags can be <strong>nested</strong>, meaning that we can have tags within tags, and it's important to be able to keep track 
+		of where each pair starts and ends. Consider an example where we want to have two divisions set:
+		
+		<h4>Example of nested tags</h4>
+		<div class="block">
+		<div >
+		&ltdiv class='firstDiv'&gt <br>
+<div class="tab">This text is in the first div<br>
+			&ltdiv class='secondDiv'&gt <br>
+<div class="tab">	This text falls into both the first and second div classes because neither have been closed yet<br></div>
+				&lt/div&gt (closes the second div)<br>
+				This text is only in the first div, which hasn't been closed yet<br>
+				</div>
+		&lt/div&gt<br>
+		this text is influenced by neither division. They have both been closed.
+		</div>
+		</div>
+	Confused? don't worry about it too much right now. It will become second nature to you quickly if you continue writing HTML
+	
+		<h2>Our bare bones HTML web page</h2>
+		Alright, we understand tags, and how to close and nest them properly. All of these skills will be used as we make the 
+		minimal framework we need for a page. It'll look like this: <p>
+		
+		<div class="block">
+		&lthtml&gt<div class="tab">
+		&lthead&gt <div class="tab">
+			&lttitle&gt replace this text with the title of your page&lt/title&gt<br>
+			(this is also where we usually put a file path to any CSS or JavaScript that we want. We'll skip this.)
+		</div>
+		&lt/head&gt<br>
+		&ltbody&gt<div class="tab">
+		replace this text here with what you want on your page
+		</div>
+		&lt/body&gt
+		</div>
+		&lt/html&gt
+		</div>
+		<p>
+		And presto! We have a webpage! It's pretty boring right now though. We'll set to adding some content, but first let's
+		go over what we did.
+		<ul>
+			<li>When we opened the html tag, we let the browser reading the file know that it was the start of a html document.
+			Everything between the tags is part of the document.</li>
+			<li>We declared a header, and everything in there is information about the document. 
+			We just added the title, but there is other important information that would have to be included for a more sophisticated project</li>
+			<li>The body tag is everything that gets presented on screen. It's here that we'll write our text, and define images and links, etc.</li>
+		</ul>
+		
+		<h1>Stuff I'd like you to add to your webpage</h1>
+		Your webpage could just be plain text, but most cool webpages have a bit more. We should add some links, 
+		images, and maybe some other stuff like lists. Here's some examples of what you can do.
+		<ul>
+			<li>you can used <div class='block'>&ltp&gt and &ltbr&gt</div> to start a new paragraph or line. These tags are special in that they 
+				don't strictly need end tags</li>
+			<li>links are declared by <div class='block'>&lta href="LinkGoesHere"&gtlink text &lt/a&gt<div> <br>
+			for example <div class='block'>&lta href="https://en.wikipedia.org/wiki/HTML"&gtwikipedia page about html&lt/a&gt </div>
+			appears as <a href="https://en.wikipedia.org/wiki/HTML">wikipedia page about html</a></li>
+			<li>images can be displayed by either pointing to a local file (a file on your computer), or by pointing to 
+			an online image. Try something like <br><div class='block'>&ltimg src="http://www.htmldog.com/rAF/htmldog.png"&gt</div><br>
+			and see what you get. You can also resize your image by explicitly stating its width our hight. Try
+			<br><div class='block'>&ltimg src="http://www.htmldog.com/rAF/htmldog.png" width=100></div><br> to see the difference. Images
+			don't need an end tag</li>
+			<li>You can combine links and images! Try something like <br>
+				<div class='block'>&lta href="http://www.htmldog.com/"&gt&ltimg src="http://www.htmldog.com/rAF/htmldog.png" width=200&gt&lt/a&gt<br></div>
+				To get this clickable image <br><a href="http://www.htmldog.com/"><img src="http://www.htmldog.com/rAF/htmldog.png" width=200></a>
+			</li>
+			<li>
+				You can make lists. They can be ordered (numbered) or unordered. For example <br>
+				<div class='block'>
+				html is <br>&ltol&gt <div class='tab'>
+					&ltli&gtFun&lt/li&gt<br>
+					&ltli&gtUseful&lt/li&gt<br>
+					&ltli&gtDear to my heart&lt/li&gt<br>
+					&ltli&gt&lta href="https://www.w3schools.com/html/"&gtClick here to learn more!&lt/a&gt&lt/li&gt<br>
+				</div>
+				&lt/ol&gt
+				</div><br>
+				To get:
+				<br>html is <ol>
+					<li>Fun</li>
+					<li>Useful</li>
+					<li>Dear to my heart</li>
+					<li><a href='https://www.w3schools.com/html/'>Click here to learn more!</a></li>
+				</ol>
+				See how we nested a link in a list item? Unordered lists are the same, with &ltul&gt instead of &ltol&gt. <br>
+				<br>html is <ul>
+					<li>Fun</li>
+					<li>Useful</li>
+					<li>Dear to my heart</li>
+					<li><a href='https://www.w3schools.com/html/'>Click here to learn more!</a></li>
+				</ul>
+			</li>
+		</ul>
+		<h3>That's plenty for now</h3>
+		Try to think of some theme for your webpage, and make it about that. If you're really into cockatiels, 
+		maybe make a page about that, with some images, a list of what they eat, how to care for them, and a few links to 
+		other useful resources. <br><img src='https://i.ytimg.com/vi/xeDWEaZWiQE/hqdefault.jpg'>
+	</body>
+</html>
